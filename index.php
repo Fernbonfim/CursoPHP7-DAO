@@ -2,10 +2,10 @@
 
 require_once("config.php");
 
-$sql = new Sql();
+$root = new Usuario(); //instanciando a classe para poder acessar seus dados abaixo
 
-$usuarios = $sql->select("SELECT *FROM tb_usuarios");
+$root->loadbyId(14); //acessando a funcao no usuario.php, e pegando o id 14 no sql
 
-echo json_encode($usuarios);
+echo $root;
 
  ?>
